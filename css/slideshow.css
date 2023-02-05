@@ -1,0 +1,122 @@
+#slideshow {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+#image1, #image2 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.blend_in_animation {
+    animation: fadein 1s linear 0s 1;
+}
+.blend_in {
+    display: block;
+}
+.blended_in {
+    display: block;
+    opacity: 1;
+    top: 0;
+}
+.blend_out_animation {
+    animation: fadein 1s linear 0s 1 reverse;
+}
+.blend_out {
+    display: block;
+}
+.blended_out {
+    display: none;
+    opacity: 0;
+}
+
+#bottom_container {
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+#bottom_text {
+    color: white;
+    font-size: 2.5vh;
+    border-radius: .5vh;
+    background-color: rgba(0,0,0,.5);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh;
+    margin-bottom: 5px;
+    width: 9vh;
+}
+#bottom_controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#qr_render {
+    visibility: hidden;
+    display: none;
+}
+#qr {
+    width: 10vh;
+    height: 10vh;
+    border: 5px solid white;
+}
+
+#playpause {
+    width: 2.5vh;
+}
+#previous,
+#playpause,
+#next {
+    cursor: pointer;
+}
+#progress {
+    line-height: 2.5vh;
+}
+
+#menu {
+    color: white;
+    font-size: 2.5vh;
+    border-radius: .5vh;
+    background-color: rgba(0,0,0,.5);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1vh;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

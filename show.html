@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+        <link rel="icon" type="image/png" href="assets/slideshow.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://res.merlindenker.de/fonts/font_awesome_6.1.0_free.js"></script>
+        <title>Slideshow</title>
+    </head>
+    <body>
+        <div id="slideshow">
+            <div id="menu">
+                <span>Steuer-Elemente: <input type="checkbox" checked id="input_controls" onclick="toggleControls();" /> [W]</span>
+                <span>QR-Code: <input type="checkbox" checked id="input_qr" onclick="toggleQR();" /> [Q]</span>
+                <span>Überblenden: <input type="checkbox" checked id="input_animation" onclick="toggleAnimation();" /></span>
+                <span>Shuffle: <input type="checkbox" id="input_shuffle" onclick="toggleShuffle();" /></span>
+                <span>Anzeigedauer: <input value="10" type="number" onchange="updateDuration();" min="1" id="input_duration" size="4" />s</span>
+                <button onclick="toggleMenu();">Schließen</button>
+            </div>
+            <div id="image1"></div>
+            <div id="image2"></div>
+            <div id="bottom_container">
+                <div id="bottom_text">
+                    <span id="progress">0/0</span>
+                    <span id="controls">
+                        <i id="previous" class="fa-solid fa-angle-left" onclick="skip(-1);"></i>
+                        <i id="playpause" class="fa-solid fa-pause" onclick="playPause();"></i>
+                        <i id="next" class="fa-solid fa-angle-right" onclick="skip(1);"></i>
+                    </span>
+                </div>
+                <canvas id="qr" width="200" height="200"></canvas>
+            </div>
+        </div>
+        <canvas id="qr_render" width="2000" height="2000"></canvas>
+        <script type="text/javascript" src="https://res.merlindenker.de/libraries/qrious_4.0.2.js"></script>
+        <script type="text/javascript" src="js/utility.js"></script>
+        <script type="text/javascript" src="js/slideshow.js"></script>
+    </body>
+</html>

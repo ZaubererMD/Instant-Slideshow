@@ -1,0 +1,13 @@
+#image_input {
+    padding-left: 24px;
+    margin-left: -12px;
+}
+#upload {
+    padding-bottom: 0;
+}
+.delete_button {
+    margin-bottom: 48px;
+}
+.image_index {
+    text-align: right;
+}
