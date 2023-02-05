@@ -1,6 +1,8 @@
 # Instant-Slideshow
 Small web-based slideshow tool that allows attendants of an event to upload images to the slideshow while it is running.
 
+![Slideshow showing an image of a cliff near Faro in Portugal](readme-images/show.png "Slideshow showing an image of a cliff near Faro in Portugal")
+
 I coded this about a week before my brothers wedding so we could use it there. Providing the guests with an option to easily add images they take with their smartphones to the slideshow has the added bonus effect that you have all these photos after the event stored in a single location for easy download.
 
 This is definitely not the most secure application ever and I highly discourage the use on public events. Only set this up to use with your friends.
@@ -31,6 +33,8 @@ In the menu you can control the following options:
 Open `index.php#SLIDESHOWNAME` on a client or scan the provided QR code on the slideshow to open the uploader. Your guests can upload new images here, upload of multiple images at the same time is supported. Once the images have been uploaded they will be shown to the users under the upload form.
 
 Users can click an image to show a dialog which asks them if they want to delete the image.
+
+<img src="https://raw.githubusercontent.com/ZaubererMD/Instant-Slideshow/main/readme-images/upload.png" width="30%" /> <img src="https://raw.githubusercontent.com/ZaubererMD/Instant-Slideshow/main/readme-images/user_images.png" width="30%" /> <img src="https://raw.githubusercontent.com/ZaubererMD/Instant-Slideshow/main/readme-images/deletion.png" width="30%" />
 
 ## Limitations
 The applications UI is in german.
